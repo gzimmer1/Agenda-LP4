@@ -1,0 +1,148 @@
+/* ============================================
+   Agenda de Compromissos - Estilos customizados
+   ============================================ */
+
+:root {
+    --color-pessoal:  #8b5cf6;
+    --color-trabalho: #0d6efd;
+    --color-saude:    #10b981;
+    --color-estudo:   #f59e0b;
+    --color-outro:    #6b7280;
+}
+
+/* Layout geral */
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: -0.3px;
+}
+
+/* Badges de categoria */
+.badge-categoria {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.3em 0.65em;
+    border-radius: 6px;
+    color: #fff;
+    white-space: nowrap;
+}
+.badge-pessoal  { background-color: var(--color-pessoal); }
+.badge-trabalho { background-color: var(--color-trabalho); }
+.badge-saude    { background-color: var(--color-saude); }
+.badge-estudo   { background-color: var(--color-estudo); color: #1a1a1a; }
+.badge-outro    { background-color: var(--color-outro); }
+
+/* Badges de status */
+.badge-status {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.3em 0.65em;
+    border-radius: 6px;
+    color: #fff;
+    white-space: nowrap;
+}
+.badge-pendente  { background-color: #ffc107; color: #1a1a1a; }
+.badge-concluido { background-color: #198754; }
+.badge-cancelado { background-color: #dc3545; }
+
+/* Cards */
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    font-size: 0.9rem;
+}
+
+/* Tabelas */
+.table th {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+.table td {
+    font-size: 0.875rem;
+}
+
+/* Transição suave nas linhas da tabela */
+.table-hover tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+/* Botões com transição */
+.btn {
+    transition: all 0.15s ease;
+}
+
+/* Formulários */
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+}
+
+/* Cards de resumo (dashboard) */
+.card.bg-primary,
+.card.bg-success,
+.card.bg-warning,
+.card.bg-info {
+    border-radius: 12px;
+}
+
+/* Spinner de loading */
+.spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Animação de entrada das linhas da tabela */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.table tbody tr {
+    animation: fadeInUp 0.2s ease both;
+}
+.table tbody tr:nth-child(1) { animation-delay: 0.02s; }
+.table tbody tr:nth-child(2) { animation-delay: 0.04s; }
+.table tbody tr:nth-child(3) { animation-delay: 0.06s; }
+.table tbody tr:nth-child(4) { animation-delay: 0.08s; }
+.table tbody tr:nth-child(5) { animation-delay: 0.10s; }
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .table thead { display: none; }
+    .table td {
+        display: block;
+        border: none;
+        padding: 0.3rem 1rem;
+    }
+    .table td:first-child { padding-top: 1rem; }
+    .table td:last-child  { padding-bottom: 1rem; border-bottom: 1px solid #dee2e6; }
+}
