@@ -192,19 +192,3 @@ curl http://localhost/agenda/public/api/compromissos
 | categoria | ENUM | pessoal/trabalho/saude/estudo/outro |
 | status | ENUM | pendente/concluido/cancelado |
 
----
-
-## 📋 Commits sugeridos
-
-```
-1. chore: estrutura inicial do projeto (MVC, config, autoload)
-2. feat: banco de dados MySQL + models (Database, Usuario, Compromisso)
-3. feat: CRUD de compromissos + autenticação + views Bootstrap
-4. feat: dashboard com gráficos Chart.js + REST API JSON
-```
-
----
-
-## 👨‍💻 Desenvolvido por
-
-Projeto desenvolvido para a disciplina de Desenvolvimento Web — IFRS.
