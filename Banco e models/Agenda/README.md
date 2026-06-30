@@ -73,8 +73,8 @@ agenda/
 
 **1. Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/agenda-compromissos.git
-cd agenda-compromissos
+git clone https://github.com/gzimmer1/Agenda-LP4.git
+cd Agenda-LP4
 ```
 
 **2. Configure o banco de dados**
